@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#telling the story of psswd
+file="/etc/passwd"
+while IFS=":" read -r opt1 opt2 opt3 opt4 opt5 opt6 opt7
+do
+	    echo "The user $opt1 is part of the $opt4 gang, lives in $opt6 and rides $opt7. $opt3's place is protected by the passcode $opt2, more info about the user here: $opt5"
+    done < "$file"
